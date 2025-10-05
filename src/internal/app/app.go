@@ -33,6 +33,10 @@ func StartApplication(appConf *configuration.AppConfig) {
 		log.Fatalf("Auto migration failed: %v", err)
 	}
 
+	// REST endpoint
+
+	mapURLs(appConf)
+
 	// Start the Gin server
 	log.Printf("REST server is running on port 8080")
 
