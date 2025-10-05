@@ -50,11 +50,13 @@ DB_USER=root
 
 DB_PASSWORD=your_password
 
-DB_HOST=127.0.0.1
+DB_HOST = 127.0.0.1
 
-DB_PORT=3306
+DB_PORT = 3306
 
-DB_NAME=wallet_db
+DB_NAME = wallet_db
+
+BACKEND_URL = http://localhost:8080
 
 # 4 Running the Application
 Run the server from the root directory
