@@ -22,4 +22,16 @@ func mapURLs(appConfig *appConfig.AppConfig) {
 	importWallerHandler := handlers.ImportWalletHandler(db)
 	router.POST(ImportWalletURL, importWallerHandler)
 
+	// Transfer handler
+	initiateTransferHandler := handlers.InitiateTransferHandler(db)
+	router.POST(TransactionInitiateURL, initiateTransferHandler)
+
+	// Execute Transfer handler
+	executeTransferHandler := handlers.ExecuteTransferHandler(db)
+	router.POST(TransactionExecuteURL, executeTransferHandler)
+
+	// View Transactions handler
+	viewTransactionsHandler := handlers.ViewTransactionsHandler(db)
+	router.GET(ViewTransactionsURL, viewTransactionsHandler)
+
 }
